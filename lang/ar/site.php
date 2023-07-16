@@ -7,6 +7,8 @@ return [
     'birthdays' => 'حفلات الميلاد',
     'fresh_juices' => 'عصائر طازجة',
     'cupcake_special' => 'كب كيك مميز',
+    'Great_taste' => 'طعم رائع ، قيمة أفضل',
+    'our_categories' => 'تخصصاتنــا',
 
 
 

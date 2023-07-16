@@ -7,6 +7,8 @@ return [
     'birthdays' => 'Birthday Parties',
     'fresh_juices' => 'Fresh Juices',
     'cupcake_special' => 'Special CupCake',
+    'Great_taste' => 'Great taste, even better value!',
+    'our_categories' => 'CATEGORIES PROMOTIONS ',
 
 
     "what_our_clients_say" => 'OUR TESTIMONIALS',

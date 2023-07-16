@@ -29,6 +29,17 @@
                 </li>
 
                 <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="bx bx-menu"></i>
+                        <span key="t-dashboards">الاقسام والتخصصات</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{route('categories.index')}}" key="t-categories"> قائمة الاقسام</a></li>
+                        <li><a href="{{route('categories.create')}}" class="create-model" key="t-default"> اضافة قسم</a></li>
+                    </ul>
+                </li>
+
+                <li>
                     <a href="{{route('admin.logout')}}" class="waves-effect">
                         <i class="bx bx-power-off"></i>
                         <span key="t-logout">تسجيل الخروج</span>

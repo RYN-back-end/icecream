@@ -1,6 +1,7 @@
 <?php
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\AuthController;
+use App\Http\Controllers\Admin\CategoryController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,14 +21,16 @@ Route::group(['prefix'=>'admin','middleware'=>'auth:admin'],function (){
     #### Auth ####
     Route::get('logout', 'AuthController@logout')->name('admin.logout');
 
-    Route::namespace('Admin')->group(function () {
 
         #### Home ####
         Route::view('/', 'Admin/index')->name('adminHome');
 
+        #### categories ####
+        Route::resource('categories', CategoryController::class);
+
+
         #### Admins ####
         Route::resource('admins', AdminController::class);
 
-    });
 });
 

@@ -6,7 +6,7 @@
                     <button type="button" class="navbar-toggle">
                         <i class="fa fa-bars"></i>
                     </button>
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href="{{route('/')}}">
                         <img class="logo-default" src="{{asset('assets/site')}}/images/logo-2.png" alt="logo" />
 {{--                        <img class="logo-retina" src="{{asset('assets/site')}}/images/logo-retina.png" alt="logo" />--}}
                     </a>
@@ -14,7 +14,7 @@
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
                         <li class="dropdown active">
-                            <a href="index-bistro.html">{{trans('site.home')}}</a>
+                            <a href="{{route('/')}}">{{trans('site.home')}}</a>
                         </li>
                     </ul>
                     <div class="nav navbar-nav navbar-right">

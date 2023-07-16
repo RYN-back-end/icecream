@@ -93,6 +93,172 @@
             </div>
         </div>
     </div>
+    <!-- Categories -->
+    <div id="section_ef1nl" class="section-item section-empty    ">
+        <div class="content container " style="">
+            <div class="row ">
+                <div id="column_xEb2H" class="hc_column_cnt col-md-12   ">
+                    <div class="row">
+                        <div class="col-md-12 hc_subtitle_cnt">
+                            <div class="title-base text-center"  id="vZu15">
+                                <hr/>
+                                <h2>{{trans('site.our_categories')}}</h2>
+                                <p>{{trans('site.Great_taste')}}</p></div>
+                        </div>
+                        <div id="column_tC2Zn" class="hc_column_cnt col-md-3  text-center  " style="">
+                            <div class="row">
+                                <div class="col-md-12 hc_image_cnt"><img class="   " style=""
+                                                                         src="http://themes.framework-y.com/gourmet/wp-content/uploads/2017/05/food-5.jpg"
+                                                                         alt=""/></div>
+                                <div class="col-md-12 hc_space_cnt">
+                                    <hr class="space xs    "/>
+                                </div>
+                                <div class="col-md-12 hc_title_tag_cnt"><h4 id="w39Nr" class=' text-bold text-m   '
+                                                                            style=''>Cheese and nouces</h4></div>
+                                <div class="col-md-12 hc_text_block_cnt">
+                                    <div id="x8w8g" class=' text-s   ' style=''>Tincidunt integer eu augue augue nunc
+                                        elit dolore ortello menotpolo.
+                                    </div>
+                                </div>
+                                <div class="col-md-12 hc_space_cnt">
+                                    <hr class="space m    "/>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="column_zlI3C" class="hc_column_cnt col-md-3  text-center  " style="">
+                            <div class="row">
+                                <div class="col-md-12 hc_image_cnt"><img class="   " style=""
+                                                                         src="http://themes.framework-y.com/gourmet/wp-content/uploads/2017/05/food-6-1.jpg"
+                                                                         alt=""/></div>
+                                <div class="col-md-12 hc_space_cnt">
+                                    <hr class="space xs    "/>
+                                </div>
+                                <div class="col-md-12 hc_title_tag_cnt"><h4 id="j2qvA" class=' text-bold text-m   '
+                                                                            style=''>Cheese mix boards</h4></div>
+                                <div class="col-md-12 hc_text_block_cnt">
+                                    <div id="CfjWi" class=' text-s   ' style=''>Tincidunt integer eu augue augue nunc
+                                        elit dolore ortello menotpolo.
+                                    </div>
+                                </div>
+                                <div class="col-md-12 hc_space_cnt">
+                                    <hr class="space m    "/>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="column_tmk8Z" class="hc_column_cnt col-md-3  text-center  " style="">
+                            <div class="row">
+                                <div class="col-md-12 hc_image_cnt"><img class="   " style=""
+                                                                         src="http://themes.framework-y.com/gourmet/wp-content/uploads/2017/05/food-7-1.jpg"
+                                                                         alt=""/></div>
+                                <div class="col-md-12 hc_space_cnt">
+                                    <hr class="space xs    "/>
+                                </div>
+                                <div class="col-md-12 hc_title_tag_cnt"><h4 id="4gnLG" class=' text-bold text-m   '
+                                                                            style=''>Burger food</h4></div>
+                                <div class="col-md-12 hc_text_block_cnt">
+                                    <div id="BNYv3" class=' text-s   ' style=''>Tincidunt integer eu augue augue nunc
+                                        elit dolore ortello menotpolo.
+                                    </div>
+                                </div>
+                                <div class="col-md-12 hc_space_cnt">
+                                    <hr class="space m    "/>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="column_cjgYa" class="hc_column_cnt col-md-3  text-center  " style="">
+                            <div class="row">
+                                <div class="col-md-12 hc_image_cnt"><img class="   " style=""
+                                                                         src="http://themes.framework-y.com/gourmet/wp-content/uploads/2017/05/food-8.jpg"
+                                                                         alt=""/></div>
+                                <div class="col-md-12 hc_space_cnt">
+                                    <hr class="space xs    "/>
+                                </div>
+                                <div class="col-md-12 hc_title_tag_cnt"><h4 id="b1pmj" class=' text-bold text-m   '
+                                                                            style=''>Gongorzoa and melograno</h4></div>
+                                <div class="col-md-12 hc_text_block_cnt">
+                                    <div id="P7IuF" class=' text-s   ' style=''>Tincidunt integer eu augue augue nunc
+                                        elit dolore ortello menotpolo.
+                                    </div>
+                                </div>
+                                <div class="col-md-12 hc_space_cnt">
+                                    <hr class="space m    "/>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="column_dBZzB" class="hc_column_cnt col-md-3  text-center  " style="">
+                            <div class="row">
+                                <div class="col-md-12 hc_image_cnt"><img class="   " style=""
+                                                                         src="http://themes.framework-y.com/gourmet/wp-content/uploads/2017/05/food-9.jpg"
+                                                                         alt=""/></div>
+                                <div class="col-md-12 hc_space_cnt">
+                                    <hr class="space xs    "/>
+                                </div>
+                                <div class="col-md-12 hc_title_tag_cnt"><h4 id="yJggW" class=' text-bold text-m   '
+                                                                            style=''>Sea food</h4></div>
+                                <div class="col-md-12 hc_text_block_cnt">
+                                    <div id="eG645" class=' text-s   ' style=''>Tincidunt integer eu augue augue nunc
+                                        elit dolore ortello menotpolo.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="column_hi4x2" class="hc_column_cnt col-md-3  text-center  " style="">
+                            <div class="row">
+                                <div class="col-md-12 hc_image_cnt"><img class="   " style=""
+                                                                         src="http://themes.framework-y.com/gourmet/wp-content/uploads/2017/05/food-10.jpg"
+                                                                         alt=""/></div>
+                                <div class="col-md-12 hc_space_cnt">
+                                    <hr class="space xs    "/>
+                                </div>
+                                <div class="col-md-12 hc_title_tag_cnt"><h4 id="CSZIt" class=' text-bold text-m   '
+                                                                            style=''>Fish dishes</h4></div>
+                                <div class="col-md-12 hc_text_block_cnt">
+                                    <div id="qhMZp" class=' text-s   ' style=''>Tincidunt integer eu augue augue nunc
+                                        elit dolore ortello menotpolo.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="column_XTkrs" class="hc_column_cnt col-md-3  text-center  " style="">
+                            <div class="row">
+                                <div class="col-md-12 hc_image_cnt"><img class="   " style=""
+                                                                         src="http://themes.framework-y.com/gourmet/wp-content/uploads/2017/05/food-11.jpg"
+                                                                         alt=""/></div>
+                                <div class="col-md-12 hc_space_cnt">
+                                    <hr class="space xs    "/>
+                                </div>
+                                <div class="col-md-12 hc_title_tag_cnt"><h4 id="gfLwa" class=' text-bold text-m   '
+                                                                            style=''>Forest fruits</h4></div>
+                                <div class="col-md-12 hc_text_block_cnt">
+                                    <div id="hkaGV" class=' text-s   ' style=''>Tincidunt integer eu augue augue nunc
+                                        elit dolore ortello menotpolo.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="column_UPAGU" class="hc_column_cnt col-md-3  text-center  " style="">
+                            <div class="row">
+                                <div class="col-md-12 hc_image_cnt"><img class="   " style=""
+                                                                         src="http://themes.framework-y.com/gourmet/wp-content/uploads/2017/05/food-12.jpg"
+                                                                         alt=""/></div>
+                                <div class="col-md-12 hc_space_cnt">
+                                    <hr class="space xs    "/>
+                                </div>
+                                <div class="col-md-12 hc_title_tag_cnt"><h4 id="y82fE" class=' text-bold text-m   '
+                                                                            style=''>Bruschettine</h4></div>
+                                <div class="col-md-12 hc_text_block_cnt">
+                                    <div id="z7eAQ" class=' text-s   ' style=''>Tincidunt integer eu augue augue nunc
+                                        elit dolore ortello menotpolo.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="section-bg-image parallax-window" data-natural-height="850" data-natural-width="1920" data-parallax="scroll" data-image-src="{{asset('assets/site')}}/images/bg-13.jpg">
         <div class="container content">
             <div class="row">
