@@ -9,10 +9,25 @@
                    accept="image/png, image/gif, image/jpeg,image/jpg, image/webp"/>
             <span class="form-text text-info">مسموح فقط بالصيغ الاتية : png, gif, jpeg, jpg, webp</span>
         </div>
-        <div class="mb-3">
-            <label class="form-label">اسم القسم</label>
-            <input type="text" name="title" class="form-control" placeholder="" value="{{$row->title}}">
+        <div class="row">
+            <div class="col-6 mb-3">
+                <label class="form-label">اسم القسم (عربي)</label>
+                <input type="text" name="title_ar" class="form-control" value="{{$row->title_ar}}">
+            </div>
+            <div class="col-6 mb-3">
+                <label class="form-label">اسم القسم (انجليزي)</label>
+                <input type="text" name="title_en" class="form-control" value="{{$row->title_en}}">
+            </div>
+            <div class="col-12 mb-3">
+                <label class="form-label">الوصف (عربي)</label>
+                <textarea name="desc_ar" class="form-control">{{$row->desc_ar}}</textarea>
+            </div>
+            <div class="col-12 mb-3">
+                <label class="form-label">الوصف (انجليزي)</label>
+                <textarea name="desc_en" class="form-control">{{$row->desc_en}}</textarea>
+            </div>
         </div>
+
     </div>
     <div class="modal-footer">
         <button type="submit" class="btn btn-success" id="updateButton">تحديث</button>

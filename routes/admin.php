@@ -1,7 +1,10 @@
 <?php
+
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Admin\ReviewController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -11,26 +14,33 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::group(['prefix'=>'admin'],function (){
+Route::group(['prefix' => 'admin'], function () {
     #### Auth ####
-    Route::get('login', [AuthController::class,'index'])->name('admin.loginPage');
-    Route::post('login', [AuthController::class,'doLogin'])->name('admin.doLogin');
+    Route::get('login', [AuthController::class, 'index'])->name('admin.loginPage');
+    Route::post('login', [AuthController::class, 'doLogin'])->name('admin.doLogin');
 });
 
-Route::group(['prefix'=>'admin','middleware'=>'auth:admin'],function (){
+Route::group(['prefix' => 'admin', 'middleware' => 'auth:admin'], function () {
     #### Auth ####
     Route::get('logout', 'AuthController@logout')->name('admin.logout');
 
 
-        #### Home ####
-        Route::view('/', 'Admin/index')->name('adminHome');
+    #### Home ####
+    Route::view('/', 'Admin/index')->name('adminHome');
 
-        #### categories ####
-        Route::resource('categories', CategoryController::class);
+    #### categories ####
+    Route::resource('categories', CategoryController::class);
+
+    #### reviews ####
+    Route::resource('reviews', ReviewController::class);
+
+    #### Products ####
+    Route::resource('products', ProductController::class);
+    Route::DELETE('products.deleteImage/{id}', [ProductController::class,'deleteImage'])->name('products.deleteImage');
 
 
-        #### Admins ####
-        Route::resource('admins', AdminController::class);
+    #### Admins ####
+    Route::resource('admins', AdminController::class);
 
 });
 

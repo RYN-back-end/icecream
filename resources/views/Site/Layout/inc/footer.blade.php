@@ -1,4 +1,4 @@
-<footer class="footer-base footer-parallax">
+<footer class="footer-base footer-parallax" style="padding-top: 50px">
     <div class="content">
         <div class="container">
             <div class="row">
@@ -7,23 +7,23 @@
                     <hr class="space s" />
                     <img width="180" src="{{asset('assets/site')}}/images/logo-2.png" alt="" />
                     <hr class="space m" />
-                    <p>
-                        We don't care if we're doing haute cuisine or burgers and pizza.<br />We just do it right. Always.
+                    <p class="text-c">
+                        {{trans('site.footer_desc')}}
                     </p>
                     <hr class="space s" />
                     <div class="btn-group social-group btn-group-icons">
-                        <a target="_blank" href="#" data-social="share-facebook"><i class="fa fa-facebook"></i></a>
-                        <a target="_blank" href="#" data-social="share-twitter"><i class="fa fa-twitter"></i></a>
-                        <a target="_blank" href="#" data-social="share-google"><i class="fa fa-instagram"></i></a>
-                        <a target="_blank" href="#" data-social="share-linkedin"><i class="fa fa-youtube"></i></a>
+                        <a target="_blank" href="https://www.facebook.com/profile.php?id=100093193835771&mibextid=LQQJ4d" data-social="share-facebook"><i class="fa fa-facebook"></i></a>
+                        <a target="_blank" href="#" data-social="share-instagram"><i class="fa fa-instagram"></i></a>
+                        <a target="_blank" href="tel:+97470707294" data-social="share-instagram"><i class="im-headset"></i></a>
                     </div>
                 </div>
                 <div class="col-md-3"></div>
             </div>
-        </div>
-        <div class="row copy-row">
-            <div class="col-md-12 copy-text">
-                © 2017 Gourmet - info@restaurant.com - +02 123458992 - Wall Street Avenue 502, New York - Restaurant Template Handmade by <a href="http://schiocco.io/">schiocco.io</a>
+            <div class="row copy-row">
+                <div class="col-md-12 copy-text">
+                    {{trans('site.copy_rights')}}   {{date('Y')}} ©
+                    <a href="https://rynprogramming.com/">RYN.Tech</a>
+                </div>
             </div>
         </div>
     </div>

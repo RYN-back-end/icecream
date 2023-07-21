@@ -40,6 +40,28 @@
                 </li>
 
                 <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="bx bx-shopping-bag"></i>
+                        <span key="t-dashboards">المنتجات</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{route('products.index')}}" key="t-categories"> قائمة المنتجات</a></li>
+                        <li><a href="{{route('products.create')}}" class="create-model" key="t-default"> اضافة منتج</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="bx bx-comment"></i>
+                        <span key="t-dashboards">التعليقات والمراجعات</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{route('reviews.index')}}" key="t-categories"> قائمة التعليقات</a></li>
+                        <li><a href="{{route('reviews.create')}}" class="create-model" key="t-default"> اضافة تعليق</a></li>
+                    </ul>
+                </li>
+
+                <li>
                     <a href="{{route('admin.logout')}}" class="waves-effect">
                         <i class="bx bx-power-off"></i>
                         <span key="t-logout">تسجيل الخروج</span>

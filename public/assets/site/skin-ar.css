@@ -14,15 +14,21 @@ SKIN: GOURMET
 
 body, .adv-img p, .caption-bottom p, .adv-circle .caption p, .advs-box p, p, .title-base p, .subheader-bootstrap .sub {
     font-family: 'Almarai', serif;
-    font-size: 14px;
+    font-size: 15px;
+    text-align: right;
     line-height: 25px;
     font-weight: 300;
     color: #737373;
 }
 
+.text-c{
+    text-align: center;
+}
+
 .comment-list .name, input, .list-blog a, .adv-img p, .subline-bar, .navbar-inner, .progress-circle, .btn-group, .popup-banner, .progress-circle p, .icon-box-cell p, .adv-img-half-content p, .icon-list, .pricing-table .list-group-item, .accordion-list .list-group-item > a, .countdown, .tagbox span, .album-title, .advs-box-multiple div.circle, .shop-menu-cnt .cart-total, .shop-menu-cnt, .shop-menu-cnt > i span, .tagbox a, .tagcloud a, .porfolio-bar, .pagination a, .social-feed-tw, .social-feed-fb, .timeline > li > .timeline-label p, .adv-img-half-content .big-text, .mi-menu ul li > a, .btn-text, .adv-big h2, .form-box, .datepicker-container, .form-box p, .advs-box-side-img h2 a, .step-number, .font-2, .niche-box-post h2, .home-slider li p, .box-menu-inner .icon-box-cell p, .pricing-table h3, .adv-img-down-text .caption-bottom p, .tweets_txt span, .comment-list .name span, .tag-row a, .tag-row.icon-row span, .niche-box-team h4, .quote-author, .niche-box-testimonails > h5 span, .navbar-nav, .nav, h1, .h1, h2, .h2, h3, .h3, h4, h5, h6, .btn, .table, .extra-content, .counter, .icon-box-cell label, .progress-label, .progress {
     font-family: 'Almarai', sans-serif;
     line-height: 25px;
+    font-size: 16px;
 }
 
 
@@ -911,9 +917,8 @@ i.cover, i.onlycover {
 .title-base p {
     margin: auto;
     padding-bottom: 5px;
-    font-size: 14px;
-    opacity: .8;
-    font-style: italic;
+    font-size: 17px;
+    opacity: .9;
 }
 
 .social-group {
@@ -984,7 +989,8 @@ i.cover, i.onlycover {
 
 .form-control {
     border-radius: 0;
-    font-size: 13px;
+    font-size: 16px;
+    height: 40px;
     border: none;
     border-bottom: 1px solid #d4d4d4;
     background: none;
@@ -1604,7 +1610,7 @@ header .btn-default:hover, header .btn:hover, header .anima-button.circle-button
 header .nav > li > a {
     padding: 35px 18px 36px 18px;
     font-weight: 600;
-    font-size: 13px;
+    font-size: 15px;
     text-transform: uppercase;
 }
 
@@ -1635,7 +1641,7 @@ header.scroll-css .icon-menu .nav > li > a {
 
 header.scroll-css .nav > li > a {
     padding: 20px 18px 20px 18px;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 600;
     transition: none;
 }
@@ -2717,7 +2723,7 @@ body .adv-img-button-content .caption i {
     font-size: 18px;
     font-weight: 500;
     padding-bottom: 5px;
-    text-align: left;
+    text-align: right;
     color: #3E3E3E;
 }
 
@@ -2738,7 +2744,7 @@ body .adv-img-button-content .caption i {
     top: -35px;
     font-size: 15px;
     z-index: 9;
-    left: 16px;
+    right: 16px;
     color: #fff;
     transform: translate3d(0,0,0);
 }

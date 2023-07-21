@@ -25,13 +25,19 @@ class CategoryRequest extends FormRequest
     {
         if ($this->id){
             return [
-                'title'     => "required",
-                'image'     => 'nullable|image|mimes:jpeg,png,jpg,gif,webp',
+                'title_ar' => "required|max:255",
+                'title_en' => "required|max:255",
+                'desc_ar'  => "required",
+                'desc_en'  => "required",
+                'image'    => 'nullable|image|mimes:jpeg,png,jpg,gif,webp',
             ];
         }
         else{
             return [
-                'title'     => "required",
+                'title_ar' => "required|max:255",
+                'title_en' => "required|max:255",
+                'desc_ar'  => "required",
+                'desc_en'  => "required",
                 'image'     => 'required|image|mimes:jpeg,png,jpg,gif,webp',
             ];
         }
@@ -40,7 +46,10 @@ class CategoryRequest extends FormRequest
     public function messages()
     {
         return [
-            'title.required' => 'يجب ادخال اسم القسم',
+            'title_ar.required' => 'يجب ادخال اسم القسم باللغة العربية',
+            'title_en.required' => 'يجب ادخال اسم القسم باللغة الانجليزية',
+            'desc_ar.required' => 'يجب ادخال وصف القسم باللغة العربية',
+            'desc_en.required' => 'يجب ادخال وصف القسم باللغة الانجليزية',
             'image.required' => 'يجب رفع صورة',
         ];
     }}

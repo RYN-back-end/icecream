@@ -3,10 +3,12 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CategoryRequest;
 use App\Models\Category;
 use App\Traits\ResponseTrait;
 use App\Traits\UploadFiles;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use Yajra\DataTables\DataTables;
 
 class CategoryController extends Controller
@@ -26,6 +28,12 @@ class CategoryController extends Controller
                 })
                 ->editColumn('image', function ($row) {
                     return ' <img src="' . getFile($row->image) . '" class="rounded avatar-md" onclick="window.open(this.src)">';
+                })
+                ->editColumn('title_ar', function ($row) {
+                    return $row->title_ar.'<br>'.$row->title_en;
+                })
+                ->editColumn('desc_ar', function ($row) {
+                    return Str::limit($row->desc_ar,70).'<br>'.Str::limit($row->desc_en,70);
                 })
                 ->addColumn('actions', function ($row) {
                     return "

@@ -34,7 +34,7 @@
                             <th>ID</th>
                             <th>الصورة</th>
                             <th>العنوان</th>
-                            <th>وقت الاضافة</th>
+                            <th>الوصف</th>
                             <th>العمليات</th>
                         </tr>
                         </thead>
@@ -69,8 +69,8 @@
         var columns = [
             {data: 'id', name: 'id'},
             {data: 'image', name: 'image'},
-            {data: 'title', name: 'title'},
-            {data: 'created_at', name: 'created_at' },
+            {data: 'title_ar', name: 'title_ar'},
+            {data: 'desc_ar', name: 'desc_ar'},
             {data: 'actions', name: 'actions'},
         ];
     </script>

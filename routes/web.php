@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Site\HomeController;
+use App\Http\Controllers\Site\ProductsController;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
@@ -19,9 +21,11 @@ Route::group(
         'prefix' => LaravelLocalization::setLocale(),
         'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
     ], function() {
-    Route::get('/', function () {
-        return view('Site/index');
-    })->name('/');
+    Route::get('/', [HomeController::class,'index'])->name('/');
+    Route::get('contact_us', [HomeController::class,'contactUs'])->name('contact_us');
+    Route::post('postContact', [HomeController::class,'postContact'])->name('postContact');
+    Route::get('products', [ProductsController::class,'index'])->name('products');
+    Route::get('productDetails/{id}', [ProductsController::class,'productDetails'])->name('productDetails');
 });
 
 

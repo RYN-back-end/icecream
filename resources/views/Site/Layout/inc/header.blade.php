@@ -16,6 +16,14 @@
                         <li class="dropdown active">
                             <a href="{{route('/')}}">{{trans('site.home')}}</a>
                         </li>
+
+                        <li class="dropdown">
+                            <a href="{{route('products')}}">{{trans('site.menu')}}</a>
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="{{route('contact_us')}}">{{trans('site.contact_us')}}</a>
+                        </li>
                     </ul>
                     <div class="nav navbar-nav navbar-right">
                         <div class="search-box-menu">

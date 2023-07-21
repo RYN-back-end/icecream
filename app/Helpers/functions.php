@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Auth;
 
-function getFile($image)
+function getFile($image = null)
 {
     if ($image != null) {
         if (!file_exists($image)) {
@@ -37,4 +37,11 @@ function loggedAdmin($field = null){
         return Auth::guard('admin');
     else
         return auth()->guard('admin')->user()->$field;
+}
+
+function loggedUser($field = null){
+    if($field == null)
+        return Auth::guard('user');
+    else
+        return auth()->guard('user')->user()->$field;
 }
