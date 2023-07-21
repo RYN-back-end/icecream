@@ -13,9 +13,9 @@
                                 <div class="container-inner">
                                     <img class="anima" src="{{asset('assets/site')}}/images/stars.png" alt=""/>
                                     <hr class="space s"/>
-                                    <p class="text-xl text-black text-color anima">ITALIAN ARTISANAL GELATO</p>
+                                    <p class="text-xl text-black text-color anima text-c">ITALIAN ARTISANAL GELATO</p>
                                     <hr class="space xs"/>
-                                    <p class="anima">
+                                    <p class="anima text-c">
                                         Fresh flavor for every one’s favor
                                     </p>
                                     <hr class="space s"/>
@@ -35,10 +35,10 @@
                                 <div class="container-inner">
                                     <img class="anima" src="{{asset('assets/site')}}/images/stars.png" alt=""/>
                                     <hr class="space s"/>
-                                    <p class="text-xl text-black text-color anima">Delicious ice-screems<br/>for family
+                                    <p class="text-xl text-black text-color anima text-c">Delicious ice-screems<br/>for family
                                     </p>
                                     <hr class="space xs"/>
-                                    <p class="anima">
+                                    <p class="anima text-c">
                                         Food, in the end, in our own tradition, is something holy. <br/>
                                         It's not about nutrients and calories. It's about sharing.
                                     </p>
