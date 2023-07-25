@@ -1,4 +1,4 @@
-<footer class="footer-base footer-parallax" style="padding-top: 50px">
+<footer class="footer-base">
     <div class="content">
         <div class="container">
             <div class="row">

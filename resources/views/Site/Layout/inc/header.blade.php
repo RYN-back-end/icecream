@@ -22,8 +22,13 @@
                         </li>
 
                         <li class="dropdown">
+                            <a href="{{route('aboutUs')}}">{{trans('site.our_history')}}</a>
+                        </li>
+
+                        <li class="dropdown">
                             <a href="{{route('contact_us')}}">{{trans('site.contact_us')}}</a>
                         </li>
+
                     </ul>
                     <div class="nav navbar-nav navbar-right">
                         <div class="search-box-menu">

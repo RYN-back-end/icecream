@@ -88,7 +88,7 @@
                     type: 'POST',
                     data: formData,
                     beforeSend: function () {
-                        $('#addButton').html('<span style="margin-right: 4px;">انتظر ..</span><i class="bx bx-loader bx-spin"></i>');
+                        $('#addButton').html('<span style="margin-right: 4px;">انتظر ..</span><i class="bx bx-loader bx-spin"></i>').attr('disabled', true);
                     },
                     success: function (data) {
                         if (data.status == 200) {
@@ -147,7 +147,7 @@
                 type: 'POST',
                 data: formData,
                 beforeSend: function () {
-                    $('#updateButton').html('<span style="margin-right: 4px;">انتظر ..</span><i class="bx bx-loader bx-spin"></i>');
+                    $('#updateButton').html('<span style="margin-right: 4px;">انتظر ..</span><i class="bx bx-loader bx-spin"></i>').attr('disabled', true);;
                 },
                 success: function (data) {
                     $('#updateButton').html(`تحديث`).attr('disabled', false);

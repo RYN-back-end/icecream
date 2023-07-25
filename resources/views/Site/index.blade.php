@@ -1,70 +1,51 @@
 ﻿@extends('Site.Layout.app')
 @section('content')
-    <!-- Slider -->
-    <div class="section-slider row-21 grunge-border-gray">
-        <div class="flexslider visible-dir-nav advanced-slider slider text-center" data-options="animation:fade">
-            <ul class="slides">
-                <li data-slider-anima="show-scale" data-time="1000" data-timeline="asc" data-timeline-time="200">
-                    <div class="section-slide">
-                        <div class="bg-cover" style="background-image:url('{{asset('assets/site')}}/images/hd-12.jpg')">
-                        </div>
-                        <div class="container">
-                            <div class="container-middle">
-                                <div class="container-inner">
-                                    <img class="anima" src="{{asset('assets/site')}}/images/stars.png" alt=""/>
-                                    <hr class="space s"/>
-                                    <p class="text-xl text-black text-color anima text-c">ITALIAN ARTISANAL GELATO</p>
-                                    <hr class="space xs"/>
-                                    <p class="anima text-c">
-                                        Fresh flavor for every one’s favor
-                                    </p>
-                                    <hr class="space s"/>
-                                    <a href="#" class="btn circle-button btn-border btn-sm anima">VIEW THE MENU</a>
-                                    <hr class="space visible-sm"/>
+    @if($sliders->count())
+        <!-- Slider -->
+        <div class="section-slider row-21 grunge-border-gray">
+            <div class="flexslider visible-dir-nav advanced-slider slider text-center" data-options="animation:fade">
+                <ul class="slides">
+                    @foreach($sliders as $slider)
+                        <li data-slider-anima="show-scale" data-time="1000" data-timeline="asc" data-timeline-time="200">
+                            <div class="section-slide">
+                                <div class="bg-cover" style="background-image:url('{{getFile($slider->image)}}')">
+                                </div>
+                                <div class="container">
+                                    <div class="container-middle">
+                                        <div class="container-inner">
+                                            <img class="anima" src="{{asset('assets/site')}}/images/stars.png" alt=""/>
+                                            <hr class="space s"/>
+                                            <p class="text-xl text-black text-color anima text-c">{{$slider->title}}</p>
+                                            <hr class="space xs"/>
+                                            <p class="anima text-c">
+                                                {{$slider->sub_title}}
+                                            </p>
+                                            <hr class="space s"/>
+                                            <a href="{{route('products')}}" class="btn circle-button btn-border btn-sm anima">{{trans('site.menu')}}</a>
+                                            <hr class="space visible-sm"/>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </li>
-                <li data-slider-anima="show-scale" data-time="1000" data-timeline="asc" data-timeline-time="200">
-                    <div class="section-slide">
-                        <div class="bg-cover" style="background-image:url('{{asset('assets/site')}}/images/hd-11.jpg')">
-                        </div>
-                        <div class="container">
-                            <div class="container-middle">
-                                <div class="container-inner">
-                                    <img class="anima" src="{{asset('assets/site')}}/images/stars.png" alt=""/>
-                                    <hr class="space s"/>
-                                    <p class="text-xl text-black text-color anima text-c">Delicious ice-screems<br/>for family
-                                    </p>
-                                    <hr class="space xs"/>
-                                    <p class="anima text-c">
-                                        Food, in the end, in our own tradition, is something holy. <br/>
-                                        It's not about nutrients and calories. It's about sharing.
-                                    </p>
-                                    <hr class="space s"/>
-                                    <a href="#" class="btn circle-button btn-border btn-sm anima">VIEW THE MENU</a>
-                                    <hr class="space visible-sm"/>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-            </ul>
+                        </li>
+
+                    @endforeach
+                </ul>
+            </div>
         </div>
-    </div>
+    @endif
+
     <!-- About Us -->
     <div class="section-bg-color">
         <div class="container content">
             <div class="row">
                 <div class="title-base">
                     <hr/>
-                    <h2>{{trans('site.about_us')}}</h2>
-                    <p>🍦 IL Sorbetto </p>
+{{--                    <h2>{{trans('site.about_us')}}</h2>--}}
+                    <h2>🍦 IL Sorbetto </h2>
                 </div>
-                <h5>"
-                    {{trans('site.about_desc')}}
-                    "
+                <h5>
+{{--                    "{{trans('site.about_desc')}}"--}}
                 </h5>
                 <br>
                 <div class="col-md-3">
@@ -96,10 +77,10 @@
     </div>
     @if($categories->count())
         <!-- Categories -->
-        <div id="section_ef1nl" class="section-item section-empty    ">
+        <div id="section_ef1nl" class="section-item section-empty">
             <div class="content container " style="">
                 <div class="row ">
-                    <div id="column_xEb2H" class="hc_column_cnt col-md-12   ">
+                    <div id="column_xEb2H" class="hc_column_cnt col-md-12">
                         <div class="row">
                             <div class="col-md-12 hc_subtitle_cnt">
                                 <div class="title-base text-center" id="vZu15">
@@ -111,18 +92,25 @@
                                 <div id="column_tC2Zn" class="hc_column_cnt col-md-4  text-center">
                                     <div class="row">
                                         <div class="col-md-12 hc_image_cnt">
+                                            <a href="products#{{$category->title}}">
                                             <img src="{{getFile($category->image)}}" width="270px" height="200" alt="{{$category->title}}"/></div>
+                                        </a>
+
                                         <div class="col-md-12 hc_space_cnt">
                                             <hr class="space xs"/>
                                         </div>
                                         <div class="col-md-12 hc_title_tag_cnt">
                                             <h4 id="w39Nr" class='text-bold text-m'>
-                                                {{$category->title}}
+                                                <a href="products#{{$category->title}}">
+                                                    {{$category->title}}
+                                                </a>
                                             </h4>
                                         </div>
                                         <div class="col-md-12 hc_text_block_cnt">
                                             <div id="x8w8g" class='text-s'>
+                                                <a href="products#{{$category->title}}">
                                                 {{\Illuminate\Support\Str::limit($category->desc,80)}}
+                                                </a>
                                             </div>
                                         </div>
                                         <div class="col-md-12 hc_space_cnt">

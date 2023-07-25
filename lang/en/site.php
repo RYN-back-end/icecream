@@ -4,6 +4,9 @@ return [
 
     'home' => 'Home',
     'contact_us' => 'Contact us',
+    'our_history' => 'Our History',
+    'our_history_desc' => 'Learn about our experiences, our goals and who we are',
+    'our_story_meet' => 'Our story meet our strategy',
     'products' => 'Products',
     'sizes' => 'Large Sizes',
     'birthdays' => 'Birthday Parties',

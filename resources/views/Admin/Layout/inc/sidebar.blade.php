@@ -30,6 +30,17 @@
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="bx bx-image"></i>
+                        <span key="t-dashboards">البانر المتحرك</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{route('sliders.index')}}" key="t-admins"> التحكم </a></li>
+                        <li><a href="{{route('sliders.create')}}" class="create-model" key="t-default"> اضافة جديد</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="bx bx-menu"></i>
                         <span key="t-dashboards">الاقسام والتخصصات</span>
                     </a>

@@ -4,7 +4,7 @@
         <div class="container">
             <div class="title-base">
                 <hr class="anima" />
-                <h1>{{$product->title}}</h1>
+                <h1>{{trans('site.menu')}} / {{$product->title}}</h1>
             </div>
         </div>
     </div>

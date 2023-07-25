@@ -8,7 +8,7 @@
 </head>
 <body>
 <div id="preloader"></div>
-<div class="footer-parallax-container">
+<div class="">
     @include('Site.Layout.inc.header')
     @yield('content')
 </div>

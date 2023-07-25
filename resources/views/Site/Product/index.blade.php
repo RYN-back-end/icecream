@@ -1,7 +1,7 @@
 ﻿@extends('Site.Layout.app')
 @section('content')
     <div class="header-title ken-burn white" data-parallax="scroll" data-bleed="0" data-position="top"
-         data-natural-height="850" data-natural-width="1920" data-image-src="{{asset('assets/site')}}/images/bg-31.png">
+         data-natural-height="750" data-natural-width="1920" data-image-src="{{asset('assets/site')}}/images/bg-31.png">
         <div class="container">
             <div class="title-base">
                 <hr class="anima"/>
@@ -9,16 +9,51 @@
             </div>
         </div>
     </div>
+    @if($categories->count())
+        <!-- Categories -->
+        <div id="section_ef1nl" class="section-item section-empty">
+            <div class="content container " style="">
+                <div class="row ">
+                    <div id="column_xEb2H" class="hc_column_cnt col-md-12">
+                        <div class="row">
+                            @foreach($categories as $category)
+                                <div id="column_tC2Zn" class="hc_column_cnt col-md-2  text-center">
+                                    <div class="row">
+                                        <div class="col-md-12 hc_image_cnt">
+                                            <a href="products#{{$category->title}}">
+                                                <img src="{{getFile($category->image)}}" style="border-radius: 50%" width="220px" height="130" alt="{{$category->title}}"/></div>
+                                        </a>
+                                        <div class="col-md-12 hc_space_cnt">
+                                            <hr class="space xs"/>
+                                        </div>
+                                        <div class="col-md-12 hc_title_tag_cnt">
+                                            <h4 id="w39Nr" class='text-bold text-m'>
+                                                <a href="products#{{$category->title}}">
+                                                    {{$category->title}}
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div class="col-md-12 hc_space_cnt">
+                                            <hr class="space m"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endif
     <div class="section-empty no-paddings-grid">
         <div class="container content">
             @foreach($categories as $category)
-                <div class="title-base">
+                <div class="title-base" id="{{$category->title}}">
                     <hr/>
                     <p>{{$category->desc}}</p>
                     <h2>{{$category->title}}</h2>
                 </div>
                 @if($category->products->count())
-                    @foreach($category->products as $product)
                         <div class="flexslider carousel visible-dir-nav outer-navs"
                              data-options="minWidth:200,itemMargin:15,numItems:3,controlNav:true,directionNav:true"
                              @if(\Illuminate\Support\Facades\App::getLocale() == 'ar')
@@ -26,9 +61,10 @@
                             @endif
                         >
                             <ul class="slides">
+                                @foreach($category->products as $product)
                                 <li>
                                     <div class="img-box adv-img adv-img-down-text">
-                                        <a class="img-box img-scale-up lightbox i-center" href="{{getFile($product->image)}}">
+                                        <a class="img-box img-scale-up lightbox i-center" href="#">
                                             <div class="caption">
                                                 <i class="im-fire-flame"></i>
                                             </div>
@@ -54,9 +90,10 @@
                                         </div>
                                     </div>
                                 </li>
+                                @endforeach
+
                             </ul>
                         </div>
-                    @endforeach
                 @else
                     <div id="emptyOrder" class="text-center">
                         <img src="{{asset('uploads/no-product.png')}}" style="width: 35%;height: 10%"
