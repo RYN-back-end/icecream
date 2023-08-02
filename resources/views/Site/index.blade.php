@@ -6,7 +6,8 @@
             <div class="flexslider visible-dir-nav advanced-slider slider text-center" data-options="animation:fade">
                 <ul class="slides">
                     @foreach($sliders as $slider)
-                        <li data-slider-anima="show-scale" data-time="1000" data-timeline="asc" data-timeline-time="200">
+                        <li data-slider-anima="show-scale" data-time="1000" data-timeline="asc"
+                            data-timeline-time="200">
                             <div class="section-slide">
                                 <div class="bg-cover" style="background-image:url('{{getFile($slider->image)}}')">
                                 </div>
@@ -21,7 +22,8 @@
                                                 {{$slider->sub_title}}
                                             </p>
                                             <hr class="space s"/>
-                                            <a href="{{route('products')}}" class="btn circle-button btn-border btn-sm anima">{{trans('site.menu')}}</a>
+                                            <a href="{{route('products')}}"
+                                               class="btn circle-button btn-border btn-sm anima">{{trans('site.menu')}}</a>
                                             <hr class="space visible-sm"/>
                                         </div>
                                     </div>
@@ -41,11 +43,11 @@
             <div class="row">
                 <div class="title-base">
                     <hr/>
-{{--                    <h2>{{trans('site.about_us')}}</h2>--}}
+                    {{--                    <h2>{{trans('site.about_us')}}</h2>--}}
                     <h2>🍦 IL Sorbetto </h2>
                 </div>
                 <h5>
-{{--                    "{{trans('site.about_desc')}}"--}}
+                    "{{$setting['second_section_'.\Illuminate\Support\Facades\App::getLocale()]}}"
                 </h5>
                 <br>
                 <div class="col-md-3">
@@ -79,344 +81,231 @@
         <!-- Categories -->
         <div id="section_ef1nl" class="section-item section-empty">
             <div class="content container " style="">
-                <div class="row ">
-                    <div id="column_xEb2H" class="hc_column_cnt col-md-12">
-                        <div class="row">
-                            <div class="col-md-12 hc_subtitle_cnt">
-                                <div class="title-base text-center" id="vZu15">
-                                    <hr/>
-                                    <h2>{{trans('site.our_categories')}}</h2>
-                                    <p>{{trans('site.Great_taste')}}</p></div>
+                <div class="row">
+                    <div class="title-base">
+                        <hr/>
+                        <h2>{{trans('site.our_categories')}}</h2>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <p>{{$setting['category_desc_'.\Illuminate\Support\Facades\App::getLocale()]}}</p>
+                        <hr class="space xs"/>
+                        <a href="{{route('products')}}" class="btn-text">{{trans('site.explore_menu')}}</a>
+                    </div>
+                    <div class="col-md-6">
+                        @foreach($categories as $category)
+                            <div class="col-md-4 hc_image_cnt cat_div">
+                                <a href="products#{{$category->title}}">
+                                    <img src="{{getFile($category->image)}}"
+                                         width="270px" height="200" alt="{{$category->title}}"/>
+                                </a>
                             </div>
-                            @foreach($categories as $category)
-                                <div id="column_tC2Zn" class="hc_column_cnt col-md-4  text-center">
-                                    <div class="row">
-                                        <div class="col-md-12 hc_image_cnt">
-                                            <a href="products#{{$category->title}}">
-                                            <img src="{{getFile($category->image)}}" width="270px" height="200" alt="{{$category->title}}"/></div>
-                                        </a>
+                        @endforeach
+                    </div>
+                </div>
 
-                                        <div class="col-md-12 hc_space_cnt">
-                                            <hr class="space xs"/>
-                                        </div>
-                                        <div class="col-md-12 hc_title_tag_cnt">
-                                            <h4 id="w39Nr" class='text-bold text-m'>
-                                                <a href="products#{{$category->title}}">
-                                                    {{$category->title}}
-                                                </a>
-                                            </h4>
-                                        </div>
-                                        <div class="col-md-12 hc_text_block_cnt">
-                                            <div id="x8w8g" class='text-s'>
-                                                <a href="products#{{$category->title}}">
-                                                {{\Illuminate\Support\Str::limit($category->desc,80)}}
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12 hc_space_cnt">
-                                            <hr class="space m"/>
+                {{--                <div class="row ">--}}
+                {{--                    <div id="column_xEb2H" class="hc_column_cnt col-md-12">--}}
+                {{--                        <div class="row">--}}
+                {{--                            <div class="col-md-12 hc_subtitle_cnt">--}}
+                {{--                                <div class="title-base text-center" id="vZu15">--}}
+                {{--                                    <hr/>--}}
+                {{--                                    <h2>{{trans('site.our_categories')}}</h2>--}}
+                {{--                                    <p>{{trans('site.Great_taste')}}</p></div>--}}
+                {{--                            </div>--}}
+                {{--                            @foreach($categories as $category)--}}
+                {{--                                <div id="column_tC2Zn" class="hc_column_cnt col-md-4  text-center">--}}
+                {{--                                    <div class="row">--}}
+                {{--                                        <div class="col-md-12 hc_image_cnt">--}}
+                {{--                                            <a href="products#{{$category->title}}">--}}
+                {{--                                            <img src="{{getFile($category->image)}}"--}}
+                {{--                                                 width="270px" height="200" alt="{{$category->title}}"/>--}}
+                {{--                                            </a>--}}
+                {{--                                        </div>--}}
+
+                {{--                                        <div class="col-md-12 hc_space_cnt">--}}
+                {{--                                            <hr class="space xs"/>--}}
+                {{--                                        </div>--}}
+                {{--                                        <div class="col-md-12 hc_title_tag_cnt">--}}
+                {{--                                            <h4 id="w39Nr" class='text-bold text-m'>--}}
+                {{--                                                <a href="products#{{$category->title}}">--}}
+                {{--                                                    {{$category->title}}--}}
+                {{--                                                </a>--}}
+                {{--                                            </h4>--}}
+                {{--                                        </div>--}}
+                {{--                                        <div class="col-md-12 hc_text_block_cnt">--}}
+                {{--                                            <div id="x8w8g" class='text-s'>--}}
+                {{--                                                <a href="products#{{$category->title}}">--}}
+                {{--                                                {{\Illuminate\Support\Str::limit($category->desc,80)}}--}}
+                {{--                                                </a>--}}
+                {{--                                            </div>--}}
+                {{--                                        </div>--}}
+                {{--                                        <div class="col-md-12 hc_space_cnt">--}}
+                {{--                                            <hr class="space m"/>--}}
+                {{--                                        </div>--}}
+                {{--                                    </div>--}}
+                {{--                                </div>--}}
+                {{--                            @endforeach--}}
+                {{--                        </div>--}}
+                {{--                    </div>--}}
+                {{--                </div>--}}
+            </div>
+        </div>
+    @endif
+
+    @if($tradition->title)
+        <div class="section-empty no-padding-bottom">
+            <div class="container content">
+                <div class="row">
+                    <div class="col-md-8 text-c">
+                        <hr class="space s"/>
+                        <div class="title-base">
+                            <hr/>
+                            <h2 class="text-c text-warning">{{$tradition['title']}}</h2>
+                            <p style="color: #8a6d3b">{{$tradition['sub_title']}}</p>
+                        </div>
+                        <p>{{$tradition['desc']}}</p>
+                        <button class="btn circle-button btn-border btn btn-sm">
+                            <a class="myBtn" href="{{route('aboutUs')}}">
+                                {{trans('site.see_who')}}
+                            </a>
+                        </button>
+                        <style>
+                            @media (max-width: 767px) {
+                                .cat_div {
+                                    width: 50%;
+                                    display: flex;
+                                    float: left;
+                                }
+                            }
+
+                            .flav_desc {
+                                letter-spacing: 0px;
+                            }
+
+                            .myBtn:hover {
+                                color: white;
+                            }
+                        </style>
+                        <hr class="space s"/>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="{{getFile($tradition->image)}}" alt=""/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endif
+    <br>
+    <br>
+
+
+    @if($flavors->count())
+        <div class="section-bg-image parallax-window" data-natural-height="850" data-natural-width="1920"
+             data-parallax="scroll" data-image-src="{{asset('assets/site')}}/images/bg-13.jpg">
+            <div class="container content">
+                <div class="row">
+                    <div class="col-md-12 col-center big-padding boxed-inverse">
+                        <div class="title-base">
+                            <hr/>
+                            <a href="{{route('products')}}">
+                                <button class="circle-button btn btn-sm">{{trans('site.explore_menu')}}</button>
+                            </a>
+                            <p class="flav_desc">
+                                {{$setting['flavor_desc_'.\Illuminate\Support\Facades\App::getLocale()]}}
+                            </p>
+                            <br>
+                            <h2>{{trans('site.flavor')}}</h2>
+                        </div>
+                        <hr class="space xs"/>
+                        <div class="row">
+                            @if($flavor_groups->count())
+                                @foreach($flavor_groups as $group)
+                                    <div class="col-md-4">
+                                        <div class="list-items">
+                                            @foreach($group as $flavor)
+                                                <div class="list-item list-item-img">
+                                                    <div class="row">
+                                                        <div class="col-md-9">
+                                                            <i class="onlycover circle icon"
+                                                               style="background-image:url({{getFile($flavor->image)}})"></i>
+                                                            <h3>{{$flavor->title}}</h3>
+                                                            <p>{{$flavor->desc}}</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            @endforeach
                                         </div>
                                     </div>
-                                </div>
-                            @endforeach
+                                @endforeach
+                            @endif
                         </div>
+                        <hr class="space l"/>
                     </div>
                 </div>
             </div>
         </div>
     @endif
 
-{{--    <div class="section-bg-image parallax-window" data-natural-height="850" data-natural-width="1920"--}}
-{{--         data-parallax="scroll" data-image-src="{{asset('assets/site')}}/images/bg-13.jpg">--}}
-{{--        <div class="container content">--}}
-{{--            <div class="row">--}}
-{{--                <div class="col-md-10 col-center big-padding boxed-inverse">--}}
-{{--                    <div class="title-base">--}}
-{{--                        <hr/>--}}
-{{--                        <h2>Week's promotions</h2>--}}
-{{--                        <p>Take a look to the news food promotions</p>--}}
-{{--                    </div>--}}
-{{--                    <hr class="space xs"/>--}}
-{{--                    <div class="row">--}}
-{{--                        <div class="col-md-6">--}}
-{{--                            <div class="list-items">--}}
-{{--                                <div class="list-item">--}}
-{{--                                    <div class="row">--}}
-{{--                                        <div class="col-md-9">--}}
-{{--                                            <h3>Slow roasted white</h3>--}}
-{{--                                            <p>Duis aute irure dolor into</p>--}}
-{{--                                        </div>--}}
-{{--                                        <div class="col-md-3">--}}
-{{--                                            <span>9.5$</span>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                                <div class="list-item">--}}
-{{--                                    <div class="row">--}}
-{{--                                        <div class="col-md-9">--}}
-{{--                                            <h3>Grass beef fillet</h3>--}}
-{{--                                            <p>Lorem ipsum dolor sito</p>--}}
-{{--                                        </div>--}}
-{{--                                        <div class="col-md-3">--}}
-{{--                                            <span>9$</span>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                                <div class="list-item">--}}
-{{--                                    <div class="row">--}}
-{{--                                        <div class="col-md-9">--}}
-{{--                                            <h3>Deboned king quail</h3>--}}
-{{--                                            <p>Sunt in culpa qui deserunt</p>--}}
-{{--                                        </div>--}}
-{{--                                        <div class="col-md-3">--}}
-{{--                                            <span>10$</span>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                        <div class="col-md-6">--}}
-{{--                            <div class="list-items">--}}
-{{--                                <div class="list-item">--}}
-{{--                                    <div class="row">--}}
-{{--                                        <div class="col-md-9">--}}
-{{--                                            <h3>Steamed king crab</h3>--}}
-{{--                                            <p>Duis aute irure dolor ingolo</p>--}}
-{{--                                        </div>--}}
-{{--                                        <div class="col-md-3">--}}
-{{--                                            <span>9$</span>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                                <div class="list-item">--}}
-{{--                                    <div class="row">--}}
-{{--                                        <div class="col-md-9">--}}
-{{--                                            <h3>Roast partridge</h3>--}}
-{{--                                            <p>Lorem ipsum dolor site</p>--}}
-{{--                                        </div>--}}
-{{--                                        <div class="col-md-3">--}}
-{{--                                            <span>9$</span>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                                <div class="list-item">--}}
-{{--                                    <div class="row">--}}
-{{--                                        <div class="col-md-9">--}}
-{{--                                            <h3>Salad of shaved fenne</h3>--}}
-{{--                                            <p>Sunt in culpa qui officia</p>--}}
-{{--                                        </div>--}}
-{{--                                        <div class="col-md-3">--}}
-{{--                                            <span>10$</span>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                    <hr class="space l"/>--}}
-{{--                    <div class="row" data-anima="fade-top" data-timeline="asc" data-timeline-time="200">--}}
-{{--                        <div class="col-md-2 hidden-sm">--}}
-{{--                        </div>--}}
-{{--                        <div class="col-md-2 anima">--}}
-{{--                            <a class="img-box circle lightbox"--}}
-{{--                               href="{{asset('assets/site')}}/images/gallery/square-12.jpg"--}}
-{{--                               data-lightbox-anima="show-scale">--}}
-{{--                                <img src="{{asset('assets/site')}}/images/gallery/square-12.jpg" alt="">--}}
-{{--                            </a>--}}
-{{--                        </div>--}}
-{{--                        <div class="col-md-2 anima">--}}
-{{--                            <a class="img-box circle lightbox"--}}
-{{--                               href="{{asset('assets/site')}}/images/gallery/square-13.jpg"--}}
-{{--                               data-lightbox-anima="show-scale">--}}
-{{--                                <img src="{{asset('assets/site')}}/images/gallery/square-13.jpg" alt="">--}}
-{{--                            </a>--}}
-{{--                        </div>--}}
-{{--                        <div class="col-md-2 anima">--}}
-{{--                            <a class="img-box circle lightbox"--}}
-{{--                               href="{{asset('assets/site')}}/images/gallery/square-14.jpg"--}}
-{{--                               data-lightbox-anima="show-scale">--}}
-{{--                                <img src="{{asset('assets/site')}}/images/gallery/square-14.jpg" alt="">--}}
-{{--                            </a>--}}
-{{--                        </div>--}}
-{{--                        <div class="col-md-2 anima hidden-sm">--}}
-{{--                            <a class="img-box circle lightbox"--}}
-{{--                               href="{{asset('assets/site')}}/images/gallery/square-15.jpg"--}}
-{{--                               data-lightbox-anima="show-scale">--}}
-{{--                                <img src="{{asset('assets/site')}}/images/gallery/square-15.jpg" alt="">--}}
-{{--                            </a>--}}
-{{--                        </div>--}}
-{{--                        <div class="col-md-2 hidden-sm">--}}
+    @if($wholesalesRows->count())
+        <div class="section-empty text-center">
+            <div class="container content">
+                <div class="row">
+                    <div class="col-md-8 col-center">
+                        <div class="title-base">
+                            <hr>
+                            <h2>{{trans('site.WHOLESALE')}}</h2>
+                            <p>{{trans('site.our_mission')}}</p>
+                        </div>
+                        <p>
+                            {{$setting['wholesale_desc_'.\Illuminate\Support\Facades\App::getLocale()]}}
+                        </p>
+                        <a href="{{route('contact_us')}}">
+                            <button class="circle-button btn btn-sm">{{trans('site.contact_us')}}</button>
+                        </a>
+                        <hr class="space xs">
+                    </div>
+                </div>
+                <hr class="space xs">
+                <table class="grid-table border-table fade-bottom" data-anima="" style="position: relative; animation-duration: 500ms; transition-timing-function: ease; transition-delay: 0ms;" aid="0.6570559068076645">
+                    <tbody>
+                    <tr>
+                        @foreach($wholesalesRows as $row)
+                            <td>
+                                <a href="#" target="_blank" rel="nofollow" data-anima="pulse-fast" data-trigger="hover" data-toggle="tooltip" data-placement="top" aid="0.6171303338748815" style="position: relative; animation-duration: 500ms; transition-timing-function: ease; transition-delay: 0ms;" class="">
+                                    <img src="{{$row->image}}" style="height: 100%" alt="">
+                                </a>
+                            </td>
+                        @endforeach
 
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-{{--    <div class="section-two-blocks blocks-right bg-white">--}}
-{{--        <div class="row">--}}
-{{--            <div class="col-md-6">--}}
-{{--                <a class="img-box"><img src="{{asset('assets/site')}}/images/block-4.jpg" alt=""/></a>--}}
-{{--            </div>--}}
-{{--            <div class="col-md-6">--}}
-{{--                <div class="content">--}}
-{{--                    <div class="title-base text-left">--}}
-{{--                        <hr/>--}}
-{{--                        <h2>Ice creams</h2>--}}
-{{--                        <p>Hand made ice creams</p>--}}
-{{--                    </div>--}}
-{{--                    <div class="list-items">--}}
-{{--                        <div class="list-item list-item-img">--}}
-{{--                            <div class="row">--}}
-{{--                                <div class="col-md-9">--}}
-{{--                                    <i class="onlycover circle icon"--}}
-{{--                                       style="background-image:url({{asset('assets/site')}}/images/gallery/square-17.jpg)"></i>--}}
-{{--                                    <h3>Steamed king crab</h3>--}}
-{{--                                    <p>--}}
-{{--                                        Duis aute irure dolo irure dolor in reprehenderit in voluptate velito esse--}}
-{{--                                        cillume.--}}
-{{--                                    </p>--}}
-{{--                                </div>--}}
-{{--                                <div class="col-md-3">--}}
-{{--                                    <span>9$</span>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                        <div class="list-item list-item-img">--}}
-{{--                            <div class="row">--}}
-{{--                                <div class="col-md-9">--}}
-{{--                                    <i class="onlycover circle icon"--}}
-{{--                                       style="background-image:url({{asset('assets/site')}}/images/gallery/square-18.jpg)"></i>--}}
-{{--                                    <h3>Roast partridge</h3>--}}
-{{--                                    <p>--}}
-{{--                                        Duis aute irure dolo irure dolor in reprehenderit in voluptate velito esse--}}
-{{--                                        cillume.--}}
-{{--                                    </p>--}}
-{{--                                </div>--}}
-{{--                                <div class="col-md-3">--}}
-{{--                                    <span>9$</span>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                        <div class="list-item list-item-img">--}}
-{{--                            <div class="row">--}}
-{{--                                <div class="col-md-9">--}}
-{{--                                    <i class="onlycover circle icon"--}}
-{{--                                       style="background-image:url({{asset('assets/site')}}/images/gallery/square-16.jpg)"></i>--}}
-{{--                                    <h3>Salad of shaved fenne</h3>--}}
-{{--                                    <p>--}}
-{{--                                        Duis aute irure dolo irure dolor in reprehenderit in voluptate velito esse--}}
-{{--                                        cillume.--}}
-{{--                                    </p>--}}
-{{--                                </div>--}}
-{{--                                <div class="col-md-3">--}}
-{{--                                    <span>10$</span>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                        <div class="list-item list-item-img">--}}
-{{--                            <div class="row">--}}
-{{--                                <div class="col-md-9">--}}
-{{--                                    <i class="onlycover circle icon"--}}
-{{--                                       style="background-image:url({{asset('assets/site')}}/images/gallery/square-19.jpg)"></i>--}}
-{{--                                    <h3>Slow roasted white</h3>--}}
-{{--                                    <p>--}}
-{{--                                        Duis aute irure dolo irure dolor in reprehenderit in voluptate velito esse--}}
-{{--                                        cillume.--}}
-{{--                                    </p>--}}
-{{--                                </div>--}}
-{{--                                <div class="col-md-3">--}}
-{{--                                    <span>9.5$</span>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-{{--    <div class="section-two-blocks bg-white">--}}
-{{--        <div class="row">--}}
-{{--            <div class="col-md-6">--}}
-{{--                <a class="img-box"><img src="{{asset('assets/site')}}/images/block-5.jpg" alt=""/></a>--}}
-{{--            </div>--}}
-{{--            <div class="col-md-6">--}}
-{{--                <div class="content">--}}
-{{--                    <div class="title-base text-left">--}}
-{{--                        <hr/>--}}
-{{--                        <h2>Desserts</h2>--}}
-{{--                        <p>Hand made desserts</p>--}}
-{{--                    </div>--}}
-{{--                    <div class="list-items">--}}
-{{--                        <div class="list-item list-item-img">--}}
-{{--                            <div class="row">--}}
-{{--                                <div class="col-md-9">--}}
-{{--                                    <i class="onlycover circle icon"--}}
-{{--                                       style="background-image:url({{asset('assets/site')}}/images/gallery/square-20.jpg)"></i>--}}
-{{--                                    <h3>Steamed king crab</h3>--}}
-{{--                                    <p>--}}
-{{--                                        Duis aute irure dolo irure dolor in reprehenderit in voluptate velito esse--}}
-{{--                                        cillume.--}}
-{{--                                    </p>--}}
-{{--                                </div>--}}
-{{--                                <div class="col-md-3">--}}
-{{--                                    <span>9$</span>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                        <div class="list-item list-item-img">--}}
-{{--                            <div class="row">--}}
-{{--                                <div class="col-md-9">--}}
-{{--                                    <i class="onlycover circle icon"--}}
-{{--                                       style="background-image:url({{asset('assets/site')}}/images/gallery/square-21.jpg)"></i>--}}
-{{--                                    <h3>Roast partridge</h3>--}}
-{{--                                    <p>--}}
-{{--                                        Duis aute irure dolo irure dolor in reprehenderit in voluptate velito esse--}}
-{{--                                        cillume.--}}
-{{--                                    </p>--}}
-{{--                                </div>--}}
-{{--                                <div class="col-md-3">--}}
-{{--                                    <span>9$</span>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                        <div class="list-item list-item-img">--}}
-{{--                            <div class="row">--}}
-{{--                                <div class="col-md-9">--}}
-{{--                                    <i class="onlycover circle icon"--}}
-{{--                                       style="background-image:url({{asset('assets/site')}}/images/gallery/square-22.jpg)"></i>--}}
-{{--                                    <h3>Salad of shaved fenne</h3>--}}
-{{--                                    <p>--}}
-{{--                                        Duis aute irure dolo irure dolor in reprehenderit in voluptate velito esse--}}
-{{--                                        cillume.--}}
-{{--                                    </p>--}}
-{{--                                </div>--}}
-{{--                                <div class="col-md-3">--}}
-{{--                                    <span>10$</span>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                        <div class="list-item list-item-img">--}}
-{{--                            <div class="row">--}}
-{{--                                <div class="col-md-9">--}}
-{{--                                    <i class="onlycover circle icon"--}}
-{{--                                       style="background-image:url({{asset('assets/site')}}/images/gallery/square-23.jpg)"></i>--}}
-{{--                                    <h3>Slow roasted white</h3>--}}
-{{--                                    <p>--}}
-{{--                                        Duis aute irure dolo irure dolor in reprehenderit in voluptate velito esse--}}
-{{--                                        cillume.--}}
-{{--                                    </p>--}}
-{{--                                </div>--}}
-{{--                                <div class="col-md-3">--}}
-{{--                                    <span>9.5$</span>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
+                    </tr>
+                    </tbody></table>
+            </div>
+        </div>
+
+    @endif
+
+    @if($clients->count())
+        <!-- Our Clients -->
+        <div class="section-empty" style="direction: ltr">
+            <div class="content">
+                <div class="flexslider carousel nav-inner"
+                     data-options="minWidth:120,itemMargin:0,numItems:6,controlNav:true,directionNav:false">
+                    <ul class="slides">
+                        @foreach($clients as $client)
+                            <li>
+                                <a class="img-box lightbox" href="#">
+                                    <img src="{{getFile($client->image)}}" style="width: 250px;height: 150px" alt="">
+                                </a>
+                            </li>
+                        @endforeach
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    @endif
+
+
 
     @if($reviews->count())
         <!-- TESTIMONIALS -->

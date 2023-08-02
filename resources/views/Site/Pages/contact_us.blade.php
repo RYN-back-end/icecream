@@ -103,7 +103,7 @@
                 },
                 success: function (data) {
                     if (data.status == 200) {
-                        toastr.success('We have received your message and we will reply you as soon as possible');
+                        toastr.success("{{trans('site.we_received')}}");
                         $('#contactForm')[0].reset();
                         $('#sendBtn').html("{{trans('site.send')}}").attr('disabled', false);
                     } else {

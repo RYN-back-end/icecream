@@ -26,6 +26,8 @@ Route::group(
     Route::post('postContact', [HomeController::class,'postContact'])->name('postContact');
     Route::get('products', [ProductsController::class,'index'])->name('products');
     Route::get('aboutUs', [HomeController::class,'aboutUs'])->name('aboutUs');
+    Route::get('wholesale', [HomeController::class,'wholesale'])->name('wholesale');
+    Route::get('order', [HomeController::class,'order'])->name('order');
     Route::get('productDetails/{id}', [ProductsController::class,'productDetails'])->name('productDetails');
 });
 

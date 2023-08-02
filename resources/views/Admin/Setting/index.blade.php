@@ -1,9 +1,9 @@
 @extends('Admin.Layout.app')
 @section('title')
-    الاعدادات
+    التحكم في الموقع
 @endsection
 @section('pageName')
-    الاعدادات
+    التحكم في الموقع
 @endsection
 @section('content')
     @if($errors->any())
@@ -31,96 +31,105 @@
                     <div class="card-body">
                         <h4 class="card-title mb-3">الاعدادات الاساسية</h4>
                         <div class="mb-3 h-25">
-                            <label class="form-label">اللوجو ( يفضل ان يكون بحجم عرض 150 × 50 طول px)</label>
+                            <label class="form-label">اللوجو</label>
                             <input type="file" class="dropify" name="logo"
-                                   data-default-file="{{getFile(($setting->logo) ?? '')}}"
+                                   data-default-file="{{getFile(($text->logo) ?? '')}}"
                                    accept="image/png, image/gif, image/jpeg,image/jpg, image/webp"/>
                             <span class="form-text text-info">مسموح فقط بـ: png, gif, jpeg, jpg, webp</span>
                         </div>
                         <div class="mb-3">
-                            <h4 class="card-title mb-3">طريقة البيع (تحديد الطريقة التي يتبعها العميل لطلب المنتج)</h4>
                             <div class="row">
-                                <div class="form-check form-radio-primary mb-3 col-lg-6 fs-5">
-                                    <input class="form-check-input" type="radio" name="order_type"
-                                           {{($setting->order_type == 'site') ? 'checked' : ''}} value="site" id="formRadioColor1">
-                                    <label class="form-check-label text-warning" for="formRadioColor1">
-                                        من خلال الموقع (سلة شراء وتسجيل دخول للموقع) <i class="fas fa-globe-africa"></i>
-                                    </label>
+                                <div class="mb-3 col-12">
+                                    <label for="second_section_ar">نص المقطع الثاني في الصفحة الرئيسية (عربي)</label>
+                                    <textarea rows="3" id="second_section_ar" name="second_section_ar" class="form-control" required>{{($text->second_section_ar) ?? ''}}</textarea>
+                                </div>
+                                <div class="mb-3 col-12">
+                                    <label for="second_section_en">نص المقطع الثاني في الصفحة الرئيسية (انجليزي)</label>
+                                    <textarea rows="3" id="second_section_en" name="second_section_en" class="form-control" required>{{($text->second_section_en) ?? ''}}</textarea>
                                 </div>
 
-                                <div class="form-check form-radio-success mb-3 col-lg-6 fs-5">
-                                    <input class="form-check-input" type="radio" name="order_type"
-                                           {{($setting->order_type == 'whatsapp') ? 'checked' : ''}} value="whatsapp" id="formRadioColor2">
-                                    <label class="form-check-label text-success" for="formRadioColor2">
-                                        واتساب (يقوم المستحدم بالتواصل معك عبر الواتساب)  <i class="fab fa-whatsapp"></i>
-                                    </label>
+                                <div class="mb-3 col-12">
+                                    <label for="category_desc_ar">نص مقطع OUR SPECIALTIES (عربي)</label>
+                                    <textarea rows="3" id="category_desc_ar" name="category_desc_ar" class="form-control" required>{{($text->category_desc_ar) ?? ''}}</textarea>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="mb-3 col-6">
-                                    <label for="phone">هاتف تواصل</label>
-                                    <input id="phone" name="phone" type="text" class="form-control" required
-                                           value="{{($setting->phone) ?? ''}}">
+                                <div class="mb-3 col-12">
+                                    <label for="category_desc_en">نص مقطع OUR SPECIALTIES (انجليزي)</label>
+                                    <textarea rows="3" id="category_desc_en" name="category_desc_en" class="form-control" required>{{($text->category_desc_en) ?? ''}}</textarea>
                                 </div>
-                                <div class="mb-3 col-6">
-                                    <label for="whatsapp">رقم واتساب</label>
-                                    <input id="whatsapp" name="whatsapp" type="text" class="form-control" required
-                                           value="{{($setting->whatsapp) ?? ''}}">
+
+                                <div class="mb-3 col-12">
+                                    <label for="flavor_desc_ar">نص مقطع Flavor (عربي)</label>
+                                    <textarea rows="3" id="flavor_desc_ar" name="flavor_desc_ar" class="form-control" required>{{($text->flavor_desc_ar) ?? ''}}</textarea>
                                 </div>
-                                <div class="mb-3 col-6">
-                                    <label for="gmail">ايميل جيميل</label>
-                                    <input id="gmail" name="gmail" type="text" class="form-control" required
-                                           value="{{($setting->gmail) ?? ''}}">
+                                <div class="mb-3 col-12">
+                                    <label for="flavor_desc_en">نص مقطع Flavor (انجليزي)</label>
+                                    <textarea rows="3" id="flavor_desc_en" name="flavor_desc_en" class="form-control" required>{{($text->flavor_desc_en) ?? ''}}</textarea>
                                 </div>
-                                <div class="mb-3 col-6">
-                                    <label for="facebook">رابط فيسبوك</label>
-                                    <input id="facebook" name="facebook" type="text" class="form-control" required
-                                           value="{{($setting->facebook) ?? ''}}">
+
+                                <div class="mb-3 col-12">
+                                    <label for="wholesale_desc_ar">نص مقطع Wholesale (عربي)</label>
+                                    <textarea rows="3" id="wholesale_desc_ar" name="wholesale_desc_ar" class="form-control" required>{{($text->wholesale_desc_ar) ?? ''}}</textarea>
+                                </div>
+                                <div class="mb-3 col-12">
+                                    <label for="wholesale_desc_en">نص مقطع Wholesale (انجليزي)</label>
+                                    <textarea rows="3" id="wholesale_desc_en" name="wholesale_desc_en" class="form-control" required>{{($text->wholesale_desc_en) ?? ''}}</textarea>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
+
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title mb-3">عن المتجر</h4>
+                        <h4 class="card-title mb-3">صفحة OUR STORY</h4>
                         <div class="mb-3 h-25">
-                            <label class="form-label">تظهر في صفحة من نحن ( يفضل ان يكون بحجم عرض 410 × 489 طول
-                                px)</label>
+                            <label class="form-label">صورة صفحة OUR STORY</label>
                             <input type="file" class="dropify" name="about_image"
-                                   data-default-file="{{getFile(($setting->about_image) ?? '')}}"
+                                   data-default-file="{{getFile(($text->about_image) ?? '')}}"
                                    accept="image/png, image/gif, image/jpeg,image/jpg, image/webp"/>
                             <span class="form-text text-info">مسموح فقط بـ: png, gif, jpeg, jpg, webp</span>
                         </div>
+                        <div class="row">
+                            <div class="mb-3 col-12">
+                                <label class="form-label">محتوي صفحة OUR STORY (عربي)</label>
+                                <textarea id="about_desc_ar" name="about_desc_ar" required>{!! ($text->about_desc_ar) ?? '' !!}</textarea>
+                            </div>
+
+                            <div class="mb-3 col-12">
+                                <label class="form-label">محتوي صفحة OUR STORY (انجليزي)</label>
+                                <textarea id="about_desc_en" name="about_desc_en" required>{!! ($text->about_desc_en) ?? '' !!}</textarea>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title mb-3">معلومات اساسية</h4>
-                        <div class="row">
-
-                            <div class="mb-3">
-                                <label for="Title">اسم المتجر</label>
-                                <input id="Title" name="title" type="text" class="form-control" required
-                                       value="{{($setting->title) ?? ''}}">
-                            </div>
-                            <div class="mb-3">
-                                <label for="desc">جملة افتتاحية (تظهر في الاعلي في كل الصفحات)</label>
-                                <input id="desc" name="desc" type="text" class="form-control" required
-                                       value="{{($setting->desc) ?? ''}}" placeholder="مثال : شحن مجاني للمنتجات فوق 250 ج">
-                            </div>
-                            <div class="mb-3">
-                                <label for="blog">عن متجرنا او من نحن</label>
-                                <textarea id="blog" name="about" required>{!! ($setting->about) ?? '' !!}</textarea>
-                            </div>
+                        <h4 class="card-title mb-3">محتوي صفحة ORDER</h4>
+                        <div class="mb-3 h-25">
+                            <label class="form-label">صورة المنيو</label>
+                            <input type="file" class="dropify" name="menu"
+                                   data-default-file="{{getFile(($text->menu) ?? '')}}"
+                                   accept="image/png, image/gif, image/jpeg,image/jpg, image/webp"/>
+                            <span class="form-text text-info">مسموح فقط بـ: png, gif, jpeg, jpg, webp</span>
                         </div>
-                        <div class="d-flex flex-wrap gap-2">
-                            <button type="submit" class="btn btn-primary waves-effect waves-light">تحديث</button>
+                        <div class="row">
+                            <div class="mb-3 col-12">
+                                <label class="form-label">محتوي صفحة ORDER (عربي)</label>
+                                <textarea id="order_desc_ar" name="order_desc_ar" required>{!! ($text->order_desc_ar) ?? '' !!}</textarea>
+                            </div>
+                            <div class="mb-3 col-12">
+                                <label class="form-label">محتوي صفحة ORDER (انجليزي)</label>
+                                <textarea id="order_desc_en" name="order_desc_en" required>{!! ($text->order_desc_en) ?? '' !!}</textarea>
+                            </div>
                         </div>
                     </div>
-                </div>
 
+                    <div class="d-flex flex-wrap gap-2">
+                        <button type="submit" class="btn btn-primary waves-effect waves-light">تحديث</button>
+                    </div>
+
+                </div>
 
             </form>
         </div>
@@ -132,6 +141,9 @@
 @section('dashboard-js')
     <script>
         $('.dropify').dropify("Upload Here");
-        CKEDITOR.replace('blog');
+        CKEDITOR.replace('about_desc_ar');
+        CKEDITOR.replace('about_desc_en');
+        CKEDITOR.replace('order_desc_ar');
+        CKEDITOR.replace('order_desc_en');
     </script>
 @endsection

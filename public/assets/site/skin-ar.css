@@ -1153,7 +1153,7 @@ div .countdown > div:last-child:after {
 .list-items .list-item h3 {
     text-transform: none;
     font-weight: 500;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 22px;
 }
 
@@ -1175,6 +1175,7 @@ div .countdown > div:last-child:after {
         font-size: 12px;
         line-height: 18px;
         margin-top: 5px;
+        font-weight: bold;
     }
 
     .list-items .list-item:last-child {
@@ -1647,7 +1648,7 @@ header.scroll-css .nav > li > a {
 }
 
 header.scroll-css .navbar-brand {
-     height: 60px;
+     height: 75px;
     padding: 10px 15px;
     transition: none;
 }
@@ -2967,6 +2968,10 @@ MOBILE - RESPONSIVE
         display: block;
     }
 
+    .nav .navbar-nav{
+        display: block;
+    }
+
     .pricing-table-big {
         margin-top: 0 !important;
     }
@@ -3114,7 +3119,7 @@ MOBILE - RESPONSIVE
     }
 
     .navbar-brand img {
-        max-height: 30px;
+        max-height: 55px;
     }
 
     header .nav > li > a, header.scroll-css .nav > li > a {

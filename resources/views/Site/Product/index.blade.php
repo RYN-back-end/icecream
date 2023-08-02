@@ -9,42 +9,85 @@
             </div>
         </div>
     </div>
-    @if($categories->count())
-        <!-- Categories -->
-        <div id="section_ef1nl" class="section-item section-empty">
-            <div class="content container " style="">
-                <div class="row ">
-                    <div id="column_xEb2H" class="hc_column_cnt col-md-12">
-                        <div class="row">
-                            @foreach($categories as $category)
-                                <div id="column_tC2Zn" class="hc_column_cnt col-md-2  text-center">
-                                    <div class="row">
-                                        <div class="col-md-12 hc_image_cnt">
-                                            <a href="products#{{$category->title}}">
-                                                <img src="{{getFile($category->image)}}" style="border-radius: 50%" width="220px" height="130" alt="{{$category->title}}"/></div>
-                                        </a>
-                                        <div class="col-md-12 hc_space_cnt">
-                                            <hr class="space xs"/>
-                                        </div>
-                                        <div class="col-md-12 hc_title_tag_cnt">
-                                            <h4 id="w39Nr" class='text-bold text-m'>
-                                                <a href="products#{{$category->title}}">
-                                                    {{$category->title}}
-                                                </a>
-                                            </h4>
-                                        </div>
-                                        <div class="col-md-12 hc_space_cnt">
-                                            <hr class="space m"/>
-                                        </div>
-                                    </div>
-                                </div>
-                            @endforeach
-                        </div>
-                    </div>
+    <div class="section-bg-color">
+        <div class="container content">
+            <div class="row">
+                <div class="title-base">
+                    <hr/>
+                    <h2>{{trans('site.our_categories')}} </h2>
                 </div>
+                <h5>
+                    {{$setting['category_desc_'.\Illuminate\Support\Facades\App::getLocale()]}}
+                </h5>
+                <br>
+                @if($categories->count())
+                @foreach($categories as $category)
+                <div class="col-md-2 col-sm-4 text-c">
+                        <a href="products#{{$category->title}}">
+                            <img src="{{getFile($category->image)}}"
+                                 style="border-radius: 50%;margin-bottom: 10px" width="220" height="130"
+                                 alt="{{$category->title}}"/>
+                        </a>
+                    <h4 class='text-bold text-m text-c'>
+                        <a href="products#{{$category->title}}">
+                            {{$category->title}}
+                        </a>
+                    </h4>
+                </div>
+                    <style>
+                        @media (max-width: 767px){
+                            .col-md-2{
+                                width: 33%;
+                                float: right;
+                            }
+                        }
+                    </style>
+                @endforeach
+                @endif
             </div>
         </div>
-    @endif
+    </div>
+
+    <hr class="space m">
+{{--    @if($categories->count())--}}
+{{--        <!-- Categories -->--}}
+{{--        <div id="section_ef1nl" class="section-item section-empty">--}}
+{{--            <div class="content container " style="">--}}
+{{--                <div class="row ">--}}
+{{--                    <div id="column_xEb2H" class="hc_column_cnt col-md-12">--}}
+{{--                        <div class="row">--}}
+{{--                            @foreach($categories as $category)--}}
+{{--                                <div id="column_tC2Zn" class="hc_column_cnt col-md-2  text-center">--}}
+{{--                                    <div class="row">--}}
+{{--                                        <div class="col-md-12 hc_image_cnt">--}}
+{{--                                            <a href="products#{{$category->title}}">--}}
+{{--                                                <img src="{{getFile($category->image)}}"--}}
+{{--                                                     style="border-radius: 50%" width="220px" height="130"--}}
+{{--                                                     alt="{{$category->title}}"/>--}}
+{{--                                        </a>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="col-md-12 hc_space_cnt">--}}
+{{--                                            <hr class="space xs"/>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="col-md-12 hc_title_tag_cnt">--}}
+{{--                                            <h4 id="w39Nr" class='text-bold text-m'>--}}
+{{--                                                <a href="products#{{$category->title}}">--}}
+{{--                                                    {{$category->title}}--}}
+{{--                                                </a>--}}
+{{--                                            </h4>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="col-md-12 hc_space_cnt">--}}
+{{--                                            <hr class="space m"/>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            @endforeach--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    @endif--}}
     <div class="section-empty no-paddings-grid">
         <div class="container content">
             @foreach($categories as $category)

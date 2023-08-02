@@ -3,18 +3,18 @@
 ------------------------------------------------------------------
 Table of contents
 
-1. Global styles  [Row 126] 
-2. Headers \ Menus [Row 427] 
-3. Side menus [Row 1611] 
-4. Footer [Row 2189] 
-5. Titles [Row 2388] 
-6. Templates [Row 2790] 
-7. Components [Row 2991] 
-8. Thypography [Row 4226] 
-9. Sections [Row 4556] 
-10. Skin white [Row 4806] 
-11. Mobile / responsive [Row 4900] 
-12. IE < 10 [Row 5803] 
+1. Global styles  [Row 126]
+2. Headers \ Menus [Row 427]
+3. Side menus [Row 1611]
+4. Footer [Row 2189]
+5. Titles [Row 2388]
+6. Templates [Row 2790]
+7. Components [Row 2991]
+8. Thypography [Row 4226]
+9. Sections [Row 4556]
+10. Skin white [Row 4806]
+11. Mobile / responsive [Row 4900]
+12. IE < 10 [Row 5803]
 -------------------------------------------------------------------
 
 ==============================
@@ -424,7 +424,7 @@ a {
 div > p:last-child {
     margin-bottom: 0;
 }
-/* 
+/*
 ==============================
 LAYOUT
 ==============================
@@ -457,9 +457,9 @@ body.boxed-layout {
     background: #fff !important;
 }
 
-/* 
+/*
 ==============================
-HEADER MENU 
+HEADER MENU
 ==============================
 */
 header {
@@ -1743,9 +1743,9 @@ header.scroll-css .icon-top .icon-menu .navbar-brand {
     display: inline-block;
 }
 
-/* 
+/*
 ==============================
-FOOTER 
+FOOTER
 ==============================
 */
 footer {
@@ -1909,7 +1909,7 @@ footer.footer-center .content {
     margin-top: 45px;
     float: none;
 }
-/* 
+/*
 ==============================
 MENU STYLE MINIMAL
 ==============================
@@ -1966,9 +1966,9 @@ MENU STYLE MINIMAL
     background-color: #FFF;
     border: 1px solid rgba(255,255,255,0);
 }
-/* 
+/*
 ==============================
-SIDE MENU 
+SIDE MENU
 ==============================
 */
 .side-menu-container, .side-menu-container #fullpage-main, .side-menu-container .footer-parallax {
@@ -2415,7 +2415,7 @@ navbar-fixed-top .side-menu-fixed .brand {
         display: none;
     }
 }
-/* 
+/*
 ==============================
 SIDE MENU STYLE SIMPLE
 ==============================
@@ -2436,9 +2436,9 @@ SIDE MENU STYLE SIMPLE
 .side-menu.ms-simple {
     padding: 0;
 }
-/* 
+/*
 ==============================
-INSIDE MENU 
+INSIDE MENU
 ==============================
 */
 .inside-menu .navbar {
@@ -2471,7 +2471,7 @@ INSIDE MENU
 .col-md-3 .inside-menu.scroll-css {
     width: 262.5px;
 }
-/* 
+/*
 ==============================
 BACKGROUND OVERLAY & GRADIENT
 ==============================
@@ -2544,9 +2544,9 @@ BACKGROUND OVERLAY & GRADIENT
     position: relative;
     z-index: 9;
 }
-/* 
+/*
 ==============================
-BACKGROUND IMAGE 
+BACKGROUND IMAGE
 ==============================
 */
 .background-page {
@@ -3355,7 +3355,7 @@ LISTS
 }
 
     .list-items .list-item:hover {
-        padding-left: 5px;
+        /*padding-left: 5px;*/
     }
 
     .list-items .list-item:last-child {
@@ -3711,10 +3711,10 @@ i.text-xl.circle, i.text-xl.square {
     .icon-box-top-bottom .icon-box-cell p {
         padding: 0;
     }
-/* 
-============================== 
-BUTTONS 
-============================== 
+/*
+==============================
+BUTTONS
+==============================
 */
 .btn {
     background-color: #f5f5f5;
@@ -4106,10 +4106,10 @@ span.caption-box {
 .thumb-xl .img-box, .thumb-l figure {
     height: 500px;
 }
-/* 
-============================== 
-GALLERY 
-============================== 
+/*
+==============================
+GALLERY
+==============================
 */
 .gallery {
     width: auto !important;
@@ -4140,10 +4140,10 @@ GALLERY
 .grid-box .img-box:not(.thumbnail) > span, .grid-box .img-box-adv > span {
     height: auto;
 }
-/* 
-============================== 
+/*
+==============================
 LIST GRID & MASO
-============================== 
+==============================
 */
 .grid-box.row {
     margin: -5px;
@@ -4519,13 +4519,13 @@ LIST GRID & MASO
     text-align: center;
 }
 
-/* 
-============================== 
-TITLES 
-============================== 
+/*
+==============================
+TITLES
+==============================
 */
 
-/* 
+/*
 ------------------------------
 TITLE BASE
 ------------------------------
@@ -4630,7 +4630,7 @@ header .title-base h1, header div.title-base p, .header-base .breadcrumb.b a, .h
     .title-base .scroll-top:hover, .title-modern .scroll-top:hover {
         background-color: #585858;
     }
-/* 
+/*
 ------------------------------
 TITLE MODERN
 ------------------------------
@@ -4672,7 +4672,7 @@ TITLE MODERN
     max-width: 700px;
     margin: 0 auto 13px auto !important;
 }
-/* 
+/*
 ------------------------------
 TITLE ICON
 ------------------------------
@@ -4727,10 +4727,10 @@ TITLE ICON
     color: rgba(150,150,150,0.18) !important;
     padding-right: 0;
 }
-/* 
-============================== 
-DROPCAPS 
-============================== 
+/*
+==============================
+DROPCAPS
+==============================
 */
 .dropcap {
     font-size: 50px;
@@ -4744,9 +4744,9 @@ DROPCAPS
 
     .dropcap.a {
     }
-/* 
+/*
 ==============================
-SEPARATORS  
+SEPARATORS
 ==============================
 */
 hr.space {
@@ -5439,8 +5439,8 @@ WORDPRESS
 }
 
 .latest-post-list .img-box img {
-    height: 55px;
-    width: 55px;
+    height: 100px;
+    width: 100px;
 }
 
 .latest-post-list .col-md-8 {
@@ -6610,9 +6610,9 @@ MOBILE - COMPONENTS
     .col-md-12 > div > .maso-box.row, .col-md-12 > div > .grid-box.row {
         width: auto !important;
     }
-    /* 
+    /*
   ==============================
-  MOBILE - SEPARATORS  
+  MOBILE - SEPARATORS
   ==============================
   */
     hr.space {
@@ -6636,9 +6636,9 @@ MOBILE - COMPONENTS
         margin-left: auto !important;
         margin-right: auto;
     }
-    /* 
+    /*
   ==============================
-  MOBILE - OTHER  
+  MOBILE - OTHER
   ==============================
   */
     .hidden-sm {

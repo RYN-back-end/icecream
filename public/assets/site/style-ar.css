@@ -3357,7 +3357,7 @@ LISTS
 }
 
 .list-items .list-item:hover {
-    padding-left: 5px;
+    /*padding-left: 2px;*/
 }
 
 .list-items .list-item:last-child {
@@ -5441,8 +5441,8 @@ WORDPRESS
 }
 
 .latest-post-list .img-box img {
-    height: 55px;
-    width: 55px;
+    height: 100px;
+    width: 100px;
 }
 
 .latest-post-list .col-md-8 {

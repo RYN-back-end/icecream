@@ -7,18 +7,30 @@
                         <i class="fa fa-bars"></i>
                     </button>
                     <a class="navbar-brand" href="{{route('/')}}">
-                        <img class="logo-default" src="{{asset('assets/site')}}/images/logo-2.png" alt="logo" />
+                        <img class="logo-default" src="{{getFile($setting->logo)}}" style="width: 192px;height: 61px" alt="logo" />
 {{--                        <img class="logo-retina" src="{{asset('assets/site')}}/images/logo-retina.png" alt="logo" />--}}
                     </a>
                 </div>
                 <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav">
+                    <ul class="nav navbar-nav"
+                    @if(\Illuminate\Support\Facades\App::getLocale() == 'ar')
+                        style="float: right;display: flex"
+                        @endif
+                    >
                         <li class="dropdown active">
                             <a href="{{route('/')}}">{{trans('site.home')}}</a>
                         </li>
 
                         <li class="dropdown">
                             <a href="{{route('products')}}">{{trans('site.menu')}}</a>
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="{{route('wholesale')}}">{{trans('site.WHOLESALE')}}</a>
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="{{route('order')}}">{{trans('site.order')}}</a>
                         </li>
 
                         <li class="dropdown">
@@ -31,14 +43,6 @@
 
                     </ul>
                     <div class="nav navbar-nav navbar-right">
-                        <div class="search-box-menu">
-                            <div class="search-box scrolldown">
-                                <input type="text" class="form-control" placeholder="Search for...">
-                            </div>
-                            <button type="button" class="btn btn-default btn-search">
-                                <span class="fa fa-search"></span>
-                            </button>
-                        </div>
                         <ul class="nav navbar-nav lan-menu">
                             <li class="dropdown">
                                 @if(\Illuminate\Support\Facades\App::getLocale() == 'ar')

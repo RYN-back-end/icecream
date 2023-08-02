@@ -3,9 +3,16 @@
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\ClientController;
+use App\Http\Controllers\Admin\ContactUsController;
+use App\Http\Controllers\Admin\FlavorController;
+use App\Http\Controllers\Admin\OrderWayController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\ReviewController;
+use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\SliderController;
+use App\Http\Controllers\Admin\TraditionController;
+use App\Http\Controllers\Admin\WholesaleController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -34,6 +41,33 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth:admin'], function () {
 
     #### reviews ####
     Route::resource('reviews', ReviewController::class);
+
+
+    #### contact ####
+    Route::resource('contacts', ContactUsController::class);
+
+    #### clients ####
+    Route::resource('clients', ClientController::class);
+
+    #### flavors ####
+    Route::resource('flavors', FlavorController::class);
+
+    #### wholesale ####
+    Route::resource('wholesale', WholesaleController::class);
+
+
+    #### settings ####
+    Route::get('settings', [SettingController::class,'index'])->name('settings.index');
+    Route::post('settingUpdate', [SettingController::class,'update'])->name('settingUpdate');
+
+    #### tradition ####
+    Route::get('tradition', [TraditionController::class,'index'])->name('tradition.index');
+    Route::post('traditionUpdate', [TraditionController::class,'update'])->name('traditionUpdate');
+
+
+    #### order ####
+    Route::resource('order_ways', OrderWayController::class);
+
 
     #### sliders ####
     Route::resource('sliders', SliderController::class);
