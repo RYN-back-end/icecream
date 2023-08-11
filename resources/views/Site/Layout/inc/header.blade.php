@@ -1,3 +1,10 @@
+<?php
+
+$categories = \App\Models\Category::latest()
+    ->select('id','title_'.\Illuminate\Support\Facades\App::getLocale().' AS title')
+    ->get();
+
+?>
 <header class="fixed-top  scroll-change wide-area" data-menu-anima="fade-in">
     <div class="navbar navbar-default mega-menu-fullwidth navbar-fixed-top" role="navigation">
         <div class="navbar navbar-main">
@@ -22,8 +29,22 @@
                         </li>
 
                         <li class="dropdown">
-                            <a href="{{route('products')}}">{{trans('site.menu')}}</a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
+                                {{trans('site.menu')}} <i class="im-arrow-down"></i>
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu multi-level">
+                                <li>
+                                    <a href="{{route('products')}}">{{trans('site.allProducts')}} </a>
+                                </li>
+                                @foreach($categories as $category)
+                                    <li>
+                                        <a href="products#{{$category->title}}">{{$category->title}}</a>
+                                    </li>
+                                @endforeach
+                            </ul>
                         </li>
+
 
                         <li class="dropdown">
                             <a href="{{route('wholesale')}}">{{trans('site.WHOLESALE')}}</a>

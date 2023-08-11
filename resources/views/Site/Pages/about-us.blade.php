@@ -60,7 +60,7 @@
                         @foreach($clients as $client)
 {{--                            <div class="list-group-item">--}}
 {{--                                <div class="row">--}}
-                                    <div class="col-md-6 col-sm-6">
+                                    <div class="col-md-6 col-sm-6 clientImg">
                                         <a class="img-box circle">
                                             <img src="{{getFile($client->image)}}" alt="">
                                         </a>
@@ -68,8 +68,30 @@
 {{--                                </div>--}}
 {{--                            </div>--}}
                         @endforeach
+                        <style>
+                            @media (max-width: 992px){
+                                .clientImg{
+                                    width: 33.3% !important;
+                                    float: left !important;
+                                }
+
+                            }
+
+                            @media (max-width: 767px){
+                                .clientImg{
+                                    width: 50% !important;
+                                    float: left !important;
+                                }
+
+                            }
+
+                        </style>
                     </div>
                 </div>
+            </div>
+            <div class="google-map row-15">
+                <iframe class="gmap_iframe" style="width: 100%;height: 100%;"
+                        src="https://maps.google.com/maps?&amp;hl=en&amp;q=جماعية بيوت الشباب القطرية&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
             </div>
         </div>
     </div>

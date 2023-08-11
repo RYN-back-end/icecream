@@ -19,6 +19,7 @@ return [
     'fresh_juices' => 'Fresh Juices',
     'products_menu' => 'Products Menu',
     'menu' => 'Menu',
+    'allProducts' => 'Our Products',
     'WHOLESALE' => 'WHOLESALE',
     'our_mission' => 'our mission is chief-driven',
     'name' => 'Full name',

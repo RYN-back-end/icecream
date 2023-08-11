@@ -34,19 +34,37 @@
                         </a>
                     </h4>
                 </div>
-                    <style>
-                        @media (max-width: 767px){
-                            .col-md-2{
-                                width: 33%;
-                                float: right;
-                            }
-                        }
-                    </style>
                 @endforeach
                 @endif
             </div>
         </div>
     </div>
+    <style>
+        @media (max-width: 767px){
+            .col-md-2{
+                width: 31% !important;
+                float: right !important;
+            }
+        }
+        @media (max-width: 610px){
+            .col-md-2{
+                width: 25% !important;
+                float: right !important;
+            }
+        }
+        @media (max-width: 495px){
+            .col-md-2{
+                width: 50% !important;
+                float: right !important;
+            }
+        }
+        @media (max-width: 310px){
+            .col-md-2{
+                width: 100% !important;
+                float: none !important;
+            }
+        }
+    </style>
 
     <hr class="space m">
 {{--    @if($categories->count())--}}

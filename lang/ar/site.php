@@ -14,6 +14,7 @@ return [
     'our_history_desc' => 'تعرف علي خبراتنا واهدافنا ومن نحن',
     'our_story_meet' => 'قصتنا تتوافق مع استراتيجيتنا',
     'products' => 'المنتجات',
+    'allProducts' => 'منتجاتنا',
     'sizes' => 'احجام مناسبة',
     'birthdays' => 'حفلات الميلاد',
     'fresh_juices' => 'عصائر طازجة',
