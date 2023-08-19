@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Auth;
 function getFile($image = null)
 {
     if ($image != null) {
-        if (!file_exists($image)) {
+        if (!file_exists(public_path($image))) {
             return asset('uploads/noImage.gif');
         } else {
             return asset($image);
